@@ -1,0 +1,197 @@
+<as:CAM
+ xmlns:as="http://www.oasis-open.org/committees/cam"
+ xmlns:camed="http://jcam.org.uk/editor"
+ xmlns:schema="AgreementSchema"
+ xmlns:xml="http://www.w3.org/XML/1998/namespace" CAMlevel="1" version="1.0" cameditor="3.2.1">
+  <as:Header>
+    <as:Description>Generated for POO.vwAgreement  by XSD 2 CAM generator v2.31</as:Description>
+    <as:Owner>To be Completed</as:Owner>
+    <as:Version>0.1</as:Version>
+    <as:DateTime>2015-05-28T15:44:26</as:DateTime>
+    <as:Parameters>
+      <as:Parameter name="AgreementId" default="12345" xpath="//vwAgreement/AgreementId" use="local" />
+    </as:Parameters>
+  </as:Header>
+  <as:AssemblyStructure>
+    <as:Structure ID="POOdemo" reference="appian.jpa" taxonomy="XML">
+      <POOdatabase>
+        <vwAgreement>
+          <AgreementId>%12345%</AgreementId>
+          <AgreementTypeId>%12345%</AgreementTypeId>
+          <AgreementTypeAbbr>%string%</AgreementTypeAbbr>
+          <AIPCode>%string%</AIPCode>
+          <AIPAccountingSourceRoleId>%12345%</AIPAccountingSourceRoleId>
+          <AgreementBeginReinsuranceYear>%12345%</AgreementBeginReinsuranceYear>
+          <AgreementEndReinsuranceYear>%12345%</AgreementEndReinsuranceYear>
+          <AipBusinessName>%string%</AipBusinessName>
+          <Street1Address>%string%</Street1Address>
+          <Street2Address>%string%</Street2Address>
+          <CityName>%string%</CityName>
+          <StateAbbr>%string%</StateAbbr>
+          <ZipCode>%string%</ZipCode>
+          <ZipExtensionCode>%string%</ZipExtensionCode>
+          <PhoneNumber>%string%</PhoneNumber>
+          <ActiveAgreementFlag>%true%</ActiveAgreementFlag>
+          <AgreementValue>%1111.0000%</AgreementValue>
+          <AgreementNotes>%string%</AgreementNotes>
+          <AgreementExpiryReasonCode>%string%</AgreementExpiryReasonCode>
+          <aipLastUpdateDate>%YYYY-MM-DD'T'HH:MI:SS.SZ%</aipLastUpdateDate>
+          <aipLastUpdateUserId>%12345%</aipLastUpdateUserId>
+        </vwAgreement>
+      </POOdatabase>
+    </as:Structure>
+  </as:AssemblyStructure>
+  <as:BusinessUseContext>
+    <as:Rules>
+      <as:default>
+        <as:context>
+          <as:constraint action="setNumberMask(//vwAgreement/AIPAccountingSourceRoleId,######)" />
+          <as:constraint action="makeOptional(//vwAgreement/AIPCode)" />
+          <as:constraint action="restrictValues(//vwAgreement/AIPCode,'01'|'02'|'03'|'44'|'51'|'52'|'99')" />
+          <as:constraint action="setLength(//vwAgreement/AIPCode,0-2)" />
+          <as:constraint action="datatype(//vwAgreement/ActiveAgreementFlag,boolean)" />
+          <as:constraint action="setNumberMask(//vwAgreement/AgreementBeginReinsuranceYear,9999)" />
+          <as:constraint action="setNumberMask(//vwAgreement/AgreementEndReinsuranceYear,9999)" />
+          <as:constraint action="makeOptional(//vwAgreement/AgreementExpiryReasonCode)" />
+          <as:constraint action="restrictValues(//vwAgreement/AgreementExpiryReasonCode,'A1'|'A2'|'C3'|'D4')" />
+          <as:constraint action="setNumberMask(//vwAgreement/AgreementId,######)" />
+          <as:constraint action="makeOptional(//vwAgreement/AgreementNotes)" />
+          <as:constraint action="setLength(//vwAgreement/AgreementNotes,1000)" />
+          <as:constraint action="restrictValues(//vwAgreement/AgreementTypeAbbr,'New'|'Old'|'Pending'|'Cancelled'|'InProgress')" />
+          <as:constraint action="setLength(//vwAgreement/AgreementTypeAbbr,0-8)" />
+          <as:constraint action="setNumberMask(//vwAgreement/AgreementTypeId,######)" />
+          <as:constraint action="setNumberMask(//vwAgreement/AgreementValue,######.####)" />
+          <as:constraint action="setLength(//vwAgreement/AipBusinessName,0-55)" />
+          <as:constraint action="makeOptional(//vwAgreement/CityName)" />
+          <as:constraint action="setLength(//vwAgreement/CityName,0-35)" />
+          <as:constraint action="makeOptional(//vwAgreement/PhoneNumber)" />
+          <as:constraint action="setLength(//vwAgreement/PhoneNumber,0-10)" />
+          <as:constraint action="makeOptional(//vwAgreement/StateAbbr)" />
+          <as:constraint action="restrictValues(//vwAgreement/StateAbbr,'MD'|'VA'|'DC'|'PA'|'WV'|'DE')" />
+          <as:constraint action="setLength(//vwAgreement/StateAbbr,0-2)" />
+          <as:constraint action="makeOptional(//vwAgreement/Street1Address)" />
+          <as:constraint action="setLength(//vwAgreement/Street1Address,0-65)" />
+          <as:constraint action="makeOptional(//vwAgreement/Street2Address)" />
+          <as:constraint action="setLength(//vwAgreement/Street2Address,0-35)" />
+          <as:constraint action="makeOptional(//vwAgreement/ZipCode)" />
+          <as:constraint action="setLength(//vwAgreement/ZipCode,5-5)" />
+          <as:constraint action="makeOptional(//vwAgreement/ZipExtensionCode)" />
+          <as:constraint action="setLength(//vwAgreement/ZipExtensionCode,4-4)" />
+          <as:constraint condition="matches(.,'(\d\.\d)')" action="setDateMask(//vwAgreement/aipLastUpdateDate,YYYY-MM-DD'T'HH:MI:SS.SZ)" />
+          <as:constraint action="setNumberMask(//vwAgreement/aipLastUpdateUserId,######)" />
+        </as:context>
+      </as:default>
+    </as:Rules>
+  </as:BusinessUseContext>
+  <as:Extension name="uk.org.jcam.camed.extensions.StructureAnnotations">
+    <camed:annotation item="//POOdatabase/vwAgreement">
+      <camed:documentation type="Definition">VW Agreement form layout</camed:documentation>
+      <camed:documentation type="Label">Agreement</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AIPAccountingSourceRoleId">
+      <camed:documentation type="Type">smallint</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/ActiveAgreementFlag">
+      <camed:documentation type="Definition">Is the agreement currently active?</camed:documentation>
+      <camed:documentation type="Section">Agreement Details</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AgreementBeginReinsuranceYear">
+      <camed:documentation type="Type">smallint</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AgreementEndReinsuranceYear">
+      <camed:documentation type="Type">smallint</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AgreementExpiryReasonCode">
+      <camed:documentation type="Definition">This is a new bit</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AgreementId">
+      <camed:documentation type="KeyRef">POOdemo.VW_AGREEMENT.AGREEMENT_ID</camed:documentation>
+      <camed:documentation type="Type">smallint</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AgreementNotes">
+      <camed:documentation type="Definition">Notes relating to the agreement.</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AgreementTypeAbbr" />
+    <camed:annotation item="//vwAgreement/AgreementTypeId">
+      <camed:documentation type="KeyRef">POOdemo.VW_AGREEMENT.AGREEMENT_TYPE_ID</camed:documentation>
+      <camed:documentation type="Type">smallint</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AgreementValue">
+      <camed:documentation type="Definition">Value of the agreement</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/AipBusinessName">
+      <camed:documentation type="Definition">Business Name associated with the agreement.</camed:documentation>
+      <camed:documentation type="Section">Business Address</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/aipLastUpdateDate">
+      <camed:documentation type="Type">datetime</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="//vwAgreement/aipLastUpdateUserId">
+      <camed:documentation type="Type">int</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AIPAccountingSourceRoleId">
+      <camed:documentation type="KeyRef">POOdemo.VW_AGREEMENT.AIP_ACCOUNTING_SOURCE_ROLE_ID</camed:documentation>
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AIP_ACCOUNTING_SOURCE_ROLE_ID</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AIPCode">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AIP_CODE</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/ActiveAgreementFlag">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.ACTIVE_AGREEMENT_FLAG</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementBeginReinsuranceYear">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_BEGIN_REINSURANCE_YEAR</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementEndReinsuranceYear">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_END_REINSURANCE_YEAR</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementExpiryReasonCode">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_EXPIRY_REASON_CODE</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementId">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_ID</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementNotes">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_NOTES</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementTypeAbbr">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_TYPE_ABBR</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementTypeId">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_TYPE_ID</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AgreementValue">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AGREEMENT_VALUE</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/AipBusinessName">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AIP_BUSINESS_NAME</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/CityName">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.CITY_NAME</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/PhoneNumber">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.PHONE_NUMBER</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/StateAbbr">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.STATE_ABBR</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/Street1Address">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.STREET1_ADDRESS</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/Street2Address">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.STREET2_ADDRESS</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/ZipCode">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.ZIP_CODE</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/ZipExtensionCode">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.ZIP_EXTENSION_CODE</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/aipLastUpdateDate">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AIP_LAST_UPDATE_DATE</camed:documentation>
+    </camed:annotation>
+    <camed:annotation item="/POOdatabase/vwAgreement/aipLastUpdateUserId">
+      <camed:documentation type="DBMapping">POOdemo.VW_AGREEMENT.AIP_LAST_UPDATE_USER_ID</camed:documentation>
+    </camed:annotation>
+  </as:Extension>
+</as:CAM>
