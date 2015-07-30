@@ -1,0 +1,28 @@
+<xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:as="http://www.oasis-open.org/committees/cam"
+            xmlns:camed="http://jcam.org.uk/editor"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:look="http://jcam.org.uk/LookupLists"
+            xmlns:dblook="http://jcam.org.uk/DbLookupLists"
+            xmlns:schema="AgreementSchema"
+            targetNamespace="AgreementSchema"
+            elementFormDefault="qualified">
+   <xsd:annotation>
+      <xsd:documentation>
+
+                    NOTICE: Generated from CAM template by XSLT
+                    NOTICE: This schema is an import of type definitions for the main schema
+                    NOTICE: Namespace definitions for: schema
+                    NOTICE: For copyright, licensing and use criteria please refer to owner authority.
+                                                
+                           CAM Template Header information: 
+                           
+                           Description: Generated for POO.vwAgreement  by XSD 2 CAM generator v2.31 
+                            Owner: To be Completed 
+                            Date: 2015-05-28T15:44:26 
+                            Version: 0.1 generator v1.85
+                    NOTICE: Please refer to the original source owner schema, dictionary, and/or CAM template for updates and changes.
+                    NOTICE: For copyright, licensing and use criteria please refer to owner authority.
+                    AgreementSchema</xsd:documentation>
+   </xsd:annotation>
+</xsd:schema>
