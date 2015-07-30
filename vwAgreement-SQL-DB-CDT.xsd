@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:as="http://www.oasis-open.org/committees/cam"
+ xmlns:camed="http://jcam.org.uk/editor"
+ xmlns:dblook="http://jcam.org.uk/DbLookupLists"
+ xmlns:look="http://jcam.org.uk/LookupLists"
+ xmlns:schema="AgreementSchema"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://jpa.appian.com/suite/types" version="0.1" elementFormDefault="qualified">
+  <xsd:annotation>
+    <xsd:documentation>NOTICE: Generated from CAM template by XSLT
+                    NOTICE:  This schema is designed to maximize software interoperability and uses basic XSD Schema constructs only.
+                     
+                    CAM Template Header information: 
+                    
+                    Description: Generated for POO.vwAgreement  by XSD 2 CAM generator v2.31 
+                    Owner: To be Completed 
+                    Date: 2015-05-28T15:44:26 
+                    Version: 0.1 
+                    XSD generator: v1.85 
+                    NS Mode: true 
+                    XSDOutput Mode: Hibernate JPA
+                    NOTICE: Please refer to the original source owner schema, dictionary, and/or CAM template for updates and changes.
+                    NOTICE: For copyright, licensing and use criteria please refer to owner authority.</xsd:documentation>
+    <xsd:appinfo source="CAM">POOdatabase</xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="AgreementSchema" schemaLocation="vwAgreement-SQL-DB-schema.xsd" />
+  <xsd:complexType name="POOdemo_vwAgreement" id="d2e54">
+    <xsd:annotation>
+      <xsd:documentation>Definition - VW Agreement form layout</xsd:documentation>
+      <xsd:documentation>Label - Agreement</xsd:documentation>
+      <xsd:appinfo source="appian.jpa">@Table(name="VW_AGREEMENT")</xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AgreementId" minOccurs="1" maxOccurs="1" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>KeyRef POOdemo.VW_AGREEMENT.AGREEMENT_ID</xsd:documentation>
+          <xsd:documentation>Original type - smallint</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_ID</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Id
+		 @GeneratedValue
+		 @Column(name="AGREEMENT_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AgreementTypeId" minOccurs="1" maxOccurs="1" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>KeyRef POOdemo.VW_AGREEMENT.AGREEMENT_TYPE_ID</xsd:documentation>
+          <xsd:documentation>Original type - smallint</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_TYPE_ID</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AGREEMENT_TYPE_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AgreementTypeAbbr" minOccurs="1" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_TYPE_ABBR</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AGREEMENT_TYPE_ABBR", columnDefinition="VARCHAR(8)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AIPCode" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AIP_CODE</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AIP_CODE", columnDefinition="VARCHAR(2)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AIPAccountingSourceRoleId" minOccurs="1" maxOccurs="1" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Original type - smallint</xsd:documentation>
+          <xsd:documentation>KeyRef POOdemo.VW_AGREEMENT.AIP_ACCOUNTING_SOURCE_ROLE_ID</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AIP_ACCOUNTING_SOURCE_ROLE_ID</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AIP_ACCOUNTING_SOURCE_ROLE_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AgreementBeginReinsuranceYear" minOccurs="1" maxOccurs="1" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Original type - smallint</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_BEGIN_REINSURANCE_YEAR</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AGREEMENT_BEGIN_REINSURANCE_YEAR")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AgreementEndReinsuranceYear" minOccurs="1" maxOccurs="1" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Original type - smallint</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_END_REINSURANCE_YEAR</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AGREEMENT_END_REINSURANCE_YEAR")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AipBusinessName" minOccurs="1" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Definition - Business Name associated with the agreement.</xsd:documentation>
+          <xsd:documentation>Display Section - Business Address</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AIP_BUSINESS_NAME</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AIP_BUSINESS_NAME", columnDefinition="VARCHAR(55)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Street1Address" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.STREET1_ADDRESS</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="STREET1_ADDRESS", columnDefinition="VARCHAR(65)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Street2Address" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.STREET2_ADDRESS</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="STREET2_ADDRESS", columnDefinition="VARCHAR(35)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="CityName" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.CITY_NAME</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="CITY_NAME", columnDefinition="VARCHAR(35)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="StateAbbr" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.STATE_ABBR</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="STATE_ABBR", columnDefinition="VARCHAR(2)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ZipCode" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.ZIP_CODE</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ZIP_CODE", columnDefinition="VARCHAR(5)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ZipExtensionCode" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.ZIP_EXTENSION_CODE</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ZIP_EXTENSION_CODE", columnDefinition="VARCHAR(4)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="PhoneNumber" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.PHONE_NUMBER</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="PHONE_NUMBER", columnDefinition="VARCHAR(10)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ActiveAgreementFlag" minOccurs="1" maxOccurs="1" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation>Definition - Is the agreement currently active?</xsd:documentation>
+          <xsd:documentation>Display Section - Agreement Details</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.ACTIVE_AGREEMENT_FLAG</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="ACTIVE_AGREEMENT_FLAG")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AgreementValue" minOccurs="1" maxOccurs="1" type="xsd:decimal">
+        <xsd:annotation>
+          <xsd:documentation>Definition - Value of the agreement</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_VALUE</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AGREEMENT_VALUE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AgreementNotes" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Definition - Notes relating to the agreement.</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_NOTES</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AGREEMENT_NOTES", columnDefinition="VARCHAR(1000)")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AgreementExpiryReasonCode" minOccurs="0" maxOccurs="1" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>Definition - This is a new bit</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AGREEMENT_EXPIRY_REASON_CODE</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AGREEMENT_EXPIRY_REASON_CODE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="aipLastUpdateDate" minOccurs="1" maxOccurs="1" type="xsd:date">
+        <xsd:annotation>
+          <xsd:documentation>Original type - datetime</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AIP_LAST_UPDATE_DATE</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AIP_LAST_UPDATE_DATE")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="aipLastUpdateUserId" minOccurs="1" maxOccurs="1" type="xsd:int">
+        <xsd:annotation>
+          <xsd:documentation>Original type - int</xsd:documentation>
+          <xsd:documentation>DBMapping - POOdemo.VW_AGREEMENT.AIP_LAST_UPDATE_USER_ID</xsd:documentation>
+          <xsd:appinfo source="appian.jpa">@Column(name="AIP_LAST_UPDATE_USER_ID")</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!-- Parent complexTypes 
+ 
+-->
+  <!-- Local simpleTypes (default namespace) 
+ 
+-->
+</xsd:schema>
